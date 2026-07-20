@@ -1,101 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book Your Trip - Explore India</title>
-<link rel="stylesheet" href="style1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Trip - Explore India</title>
+
+    <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
 
-<header>
+    <!-- ================= HEADER ================= -->
+    <header>
 
-<div class="logo">
-<h2>🌍 Explore India</h2>
-</div>
+        <div class="logo">
+            <h2>🌍 Explore India</h2>
+        </div>
 
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="destinations.html">Destinations</a></li>
-<li><a href="packages.html">Packages</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="booking.html" class="active">Booking</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
 
-</header>
+                <li>
+                    <a href="destinations.html">Destinations</a>
+                </li>
 
-<section class="about">
+                <li>
+                    <a href="packages.html">Packages</a>
+                </li>
 
-<h2>Book Your Dream Trip</h2>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
 
-<form align="center">
+                <li>
+                    <a href="booking.html" class="active">Booking</a>
+                </li>
 
-<p><b>Full Name</b></p>
-<input type="text" placeholder="Enter Your Name" size="40"><br><br>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-<p><b>Email Address</b></p>
-<input type="email" placeholder="Enter Your Email" size="40"><br><br>
+    </header>
 
-<p><b>Mobile Number</b></p>
-<input type="tel" placeholder="Enter Mobile Number" size="40"><br><br>
 
-<p><b>Select Destination</b></p>
+    <!-- ================= BOOKING SECTION ================= -->
+    <section class="about">
 
-<select>
-<option>Goa</option>
-<option>Manali</option>
-<option>Jaipur</option>
-<option>Kerala</option>
-<option>Kashmir</option>
-<option>Agra</option>
-</select>
+        <h2>Book Your Dream Trip</h2>
 
-<br><br>
+        <p style="text-align:center; margin-bottom:30px;">
+            Fill in your travel details and start planning your
+            unforgettable journey across India.
+        </p>
 
-<p><b>Travel Date</b></p>
 
-<input type="date">
+        <form class="booking-form">
 
-<br><br>
+            <!-- Full Name -->
+            <div class="form-group">
 
-<p><b>Number of Travelers</b></p>
+                <label for="name">
+                    Full Name
+                </label>
 
-<input type="number" min="1" max="20">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter Your Full Name"
+                    required>
 
-<br><br>
-<p><b>Special Request</b></p>
+            </div>
 
-<textarea rows="5" cols="45" placeholder="Write your message here..."></textarea>
 
-<br><br>
+            <!-- Email -->
+            <div class="form-group">
 
-<input type="submit" value="Book Now">
+                <label for="email">
+                    Email Address
+                </label>
 
-&nbsp;&nbsp;
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Your Email"
+                    required>
 
-<input type="reset" value="Clear Form">
+            </div>
 
-</form>
 
-</section>
+            <!-- Mobile -->
+            <div class="form-group">
 
-<footer>
+                <label for="mobile">
+                    Mobile Number
+                </label>
 
-<h3>Explore India Travel Planner</h3>
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="Enter 10 Digit Mobile Number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required>
 
-<p>Email : info@exploreindia.com</p>
+            </div>
 
-<p>Phone : +91 9876543210</p>
 
-<p>Address : New Delhi, India</p>
+            <!-- Destination -->
+            <div class="form-group">
 
-<p>&copy; 2026 Explore India. All Rights Reserved.</p>
+                <label for="destination">
+                    Select Destination
+                </label>
 
-</footer>
+                <select
+                    id="destination"
+                    name="destination"
+                    required>
+
+                    <option value="">
+                        -- Select Destination --
+                    </option>
+
+                    <option value="Goa">
+                        Goa
+                    </option>
+
+                    <option value="Manali">
+                        Manali
+                    </option>
+
+                    <option value="Jaipur">
+                        Jaipur
+                    </option>
+
+                    <option value="Kerala">
+                        Kerala
+                    </option>
+
+                    <option value="Kashmir">
+                        Kashmir
+                    </option>
+
+                    <option value="Agra">
+                        Agra
+                    </option>
+
+                    <option value="Ladakh">
+                        Ladakh
+                    </option>
+
+                    <option value="Rishikesh">
+                        Rishikesh
+                    </option>
+
+                    <option value="Udaipur">
+                        Udaipur
+                    </option>
+
+                    <option value="Varanasi">
+                        Varanasi
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Travel Date -->
+            <div class="form-group">
+
+                <label for="travel-date">
+                    Travel Date
+                </label>
+
+                <input
+                    type="date"
+                    id="travel-date"
+                    name="travel-date"
+                    required>
+
+            </div>
+
+
+            <!-- Travelers -->
+            <div class="form-group">
+
+                <label for="travelers">
+                    Number of Travelers
+                </label>
+
+                <input
+                    type="number"
+                    id="travelers"
+                    name="travelers"
+                    min="1"
+                    max="20"
+                    value="1"
+                    required>
+
+            </div>
+
+
+            <!-- Special Request -->
+            <div class="form-group">
+
+                <label for="message">
+                    Special Request
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Write any special request here..."></textarea>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="form-buttons">
+
+                <button
+                    type="submit"
+                    class="btn">
+
+                    Book Now
+
+                </button>
+
+                <button
+                    type="reset"
+                    class="reset-btn">
+
+                    Clear Form
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <h3>🌍 Explore India Travel Planner</h3>
+
+        <p>
+            Email : info@exploreindia.com
+        </p>
+
+        <p>
+            Phone : +91 9876543210
+        </p>
+
+        <p>
+            Address : New Delhi, India
+        </p>
+
+        <p>
+            &copy; 2026 Explore India.
+            All Rights Reserved.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
